@@ -24,8 +24,10 @@ output application/java
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
+				<set-payload value="#[payload]" doc:name="Set Payload" doc:id="030515b6-04dd-42d1-9a9d-f056afe86989" />
 			</otherwise>
 		</choice>
+		<set-payload value="#[payload]" doc:name="Set Payload" doc:id="f6d4abc4-2fc5-4743-95a0-8dc9d3c587e0" />
 		<ee:transform doc:name="Transform Message" doc:id="8b9fdf0c-856d-43e7-a477-ef49524f1a90" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
