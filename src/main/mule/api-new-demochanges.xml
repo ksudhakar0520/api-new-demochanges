@@ -15,7 +15,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 				<ee:transform doc:name="Transform Message" doc:id="b9844ca1-6661-494f-b72b-3efcb5b2ef32" >
 					<ee:message >
 						<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/json
 ---
 {
 }]]></ee:set-payload>
@@ -38,7 +38,7 @@ output application/java
 		<ee:transform doc:name="Transform Message" doc:id="8b9fdf0c-856d-43e7-a477-ef49524f1a90" >
 			<ee:message >
 				<ee:set-payload ><![CDATA[%dw 2.0
-output application/java
+output application/xml
 ---
 {
 }]]></ee:set-payload>
