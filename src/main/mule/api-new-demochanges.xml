@@ -11,7 +11,28 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 	<flow name="api-new-demochangesFlow" doc:id="55eb7dca-5f22-48cc-937b-00054d37f4f0" >
 		<http:listener doc:name="Listener" doc:id="082ff8e6-6ae1-4a8e-9189-ff85195e98f2" config-ref="HTTP_Listener_config" path="/*"/>
 		<choice doc:name="Choice" doc:id="482555e6-02f7-4a76-83d2-1e5152196d9a" >
-			<when expression="false"/>
+			<when expression="false">
+				<ee:transform doc:name="Transform Message" doc:id="b9844ca1-6661-494f-b72b-3efcb5b2ef32" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+			</when>
+			<otherwise >
+				<ee:transform doc:name="Transform Message" doc:id="8e53f943-cacd-480a-a2ed-8f335040ca65" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+			</otherwise>
 		</choice>
 		<ee:transform doc:name="Transform Message" doc:id="8b9fdf0c-856d-43e7-a477-ef49524f1a90" >
 			<ee:message >
@@ -23,7 +44,28 @@ output application/java
 			</ee:message>
 		</ee:transform>
 		<choice doc:name="Choice" doc:id="c0cbbd7a-584d-4acd-9b92-f4cbbc64b2c2" >
-			<when expression="true"/>
+			<when expression="true">
+				<ee:transform doc:name="Transform Message" doc:id="8b923cc1-f081-4b26-9c64-56bf087fb034" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+			</when>
+			<otherwise >
+				<ee:transform doc:name="Transform Message" doc:id="f9c478cb-6b53-47ab-b9b8-7d04dc720fb7" >
+					<ee:message >
+						<ee:set-payload ><![CDATA[%dw 2.0
+output application/java
+---
+{
+}]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+			</otherwise>
 		</choice>
 	</flow>
 </mule>
