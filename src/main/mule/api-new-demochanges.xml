@@ -12,16 +12,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<http:listener doc:name="Listener" doc:id="082ff8e6-6ae1-4a8e-9189-ff85195e98f2" config-ref="HTTP_Listener_config" path="/*"/>
 		<choice doc:name="Choice" doc:id="482555e6-02f7-4a76-83d2-1e5152196d9a" >
 			<when expression="false">
-				<ee:transform doc:name="Transform Message" doc:id="b9844ca1-6661-494f-b72b-3efcb5b2ef32" >
-					<ee:message >
-						<ee:set-payload ><![CDATA[%dw 2.0
-output application/json
----
-{
-}]]></ee:set-payload>
-					</ee:message>
-				</ee:transform>
-				<ee:transform doc:name="Transform Message" doc:id="2207dfe1-0a05-44b8-858c-01ec718b2111" />
+				<set-payload value="#[payload]" doc:name="Set Payload" doc:id="cbfdc41a-4eea-46c9-8acc-39d5737e08dd" />
 			</when>
 			<otherwise >
 				<ee:transform doc:name="Transform Message" doc:id="8e53f943-cacd-480a-a2ed-8f335040ca65" >
