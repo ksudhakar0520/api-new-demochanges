@@ -19,5 +19,8 @@ output application/java
 }]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<choice doc:name="Choice" doc:id="c0cbbd7a-584d-4acd-9b92-f4cbbc64b2c2" >
+			<when expression="true"/>
+		</choice>
 	</flow>
 </mule>
