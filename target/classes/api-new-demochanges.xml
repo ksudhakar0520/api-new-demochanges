@@ -21,6 +21,7 @@ output application/java
 }]]></ee:set-payload>
 					</ee:message>
 				</ee:transform>
+				<ee:transform doc:name="Transform Message" doc:id="2207dfe1-0a05-44b8-858c-01ec718b2111" />
 			</when>
 			<otherwise >
 				<ee:transform doc:name="Transform Message" doc:id="8e53f943-cacd-480a-a2ed-8f335040ca65" >
